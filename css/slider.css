@@ -29,6 +29,10 @@
     font-size: 18px;
   }
   
+  .nav-btn svg {
+    height: 100px;
+    width: 40px;
+  }
   .nav-btn:hover {
     background-color: #555;
   }
