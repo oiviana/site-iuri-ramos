@@ -1,36 +1,33 @@
-const slider = document.querySelectorAll('.slider');
-const btnPrev = document.getElementById('prev-button');
-const btnNext = document.getElementById('next-button');
+import { slider1 } from "./sliderMock.js";
 
-let currentSlide = 0;
+const sliderContainer = document.getElementById("slider1");
+let currentIndex = 0;
 
-function hideSlider() {
-  slider.forEach(item => item.classList.remove('on'))
-}
+const renderSlides = () => {
+  sliderContainer.innerHTML = slider1
+    .map(
+      (slide) =>
+        `<div class="slide" id="slide-${slide.id}">
+           <img src="${slide.imgsrc}" alt="${slide.imgtitle}" title="${slide.imgtitle}">
+         </div>`
+    )
+    .join("");
+};
 
-function showSlider() {
-  slider[currentSlide].classList.add('on')
-}
+const updateSliderPosition = () => {
+  const offset = -currentIndex * 100;
+  sliderContainer.style.transform = `translateX(${offset}%)`;
+};
 
-function nextSlider() {
-  hideSlider()
-  if(currentSlide === slider.length -1) {
-    currentSlide = 0
-  } else {
-    currentSlide++
-  }
-  showSlider()
-}
+document.getElementById("prev").addEventListener("click", () => {
+  currentIndex = (currentIndex - 1 + slider1.length) % slider1.length;
+  updateSliderPosition();
+});
 
-function prevSlider() {
-  hideSlider()
-  if(currentSlide === 0) {
-    currentSlide = slider.length -1
-  } else {
-    currentSlide--
-  }
-  showSlider()
-}
+document.getElementById("next").addEventListener("click", () => {
+  currentIndex = (currentIndex + 1) % slider1.length;
+  updateSliderPosition();
+});
 
-btnNext.addEventListener('click', nextSlider)
-btnPrev.addEventListener('click', prevSlider)
+renderSlides();
+updateSliderPosition();

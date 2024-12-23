@@ -1,0 +1,35 @@
+  .carousel {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    overflow: hidden;
+  }
+  
+  .slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+  }
+  
+  .slider img {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 5px;
+  }
+  
+  .nav-btn {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 18px;
+  }
+  
+  .nav-btn:hover {
+    background-color: #555;
+  }
+  
