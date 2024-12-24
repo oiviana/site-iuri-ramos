@@ -11,11 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" origem cruzada>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&family=Oswald:wght@200..700&display=swap"
-        rel="folha de estilo">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -23,11 +20,8 @@
     <header>
         <nav>
             <ul>
-
                 <li><a href="#">Cursos</a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#/" target="_blank">Instagram </a></li>
-                <li><a href="#" target="_blank"></a></li>
+                <li><a href="#">Instagram</a></li>
                 <li><a href="#">Contato</a></li>
             </ul>
         </nav>
@@ -38,31 +32,24 @@
     </div>
 
     <div class="fundo-2">
-        <div class="carousel">
-            <button id="prev" class="nav-btn"></button>
-            <div id="slider1" class="slider"></div>
-            <button id="next" class="nav-btn">
-                <?xml version="1.0" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
- "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
-<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
- width="556.000000pt" height="980.000000pt" viewBox="0 0 556.000000 980.000000"
- preserveAspectRatio="xMidYMid meet">
-
-<g transform="translate(0.000000,980.000000) scale(0.100000,-0.100000)"
-fill="#42c6fac0" stroke="none">
-<path d="M535 9776 c-167 -44 -257 -91 -350 -184 -101 -101 -154 -208 -177
--357 -15 -97 1 -227 36 -300 83 -168 377 -474 2423 -2525 l1512 -1516 -600
--600 c-331 -329 -1047 -1049 -1592 -1599 -1538 -1552 -1716 -1743 -1764 -1904
--23 -77 -23 -236 1 -316 61 -204 227 -375 431 -442 103 -34 276 -39 367 -10
-159 49 388 266 2414 2292 2050 2050 2229 2240 2290 2429 52 165 40 248 -60
-401 -154 235 -434 531 -1866 1969 -2041 2049 -2409 2405 -2677 2586 -156 105
--224 118 -388 76z"/>
-</g>
-</svg>
+        <div class="slider">
+            <button id="prev-button" class="nav-btn prev-button">
+                <svg aria-hidden="true" class="e-font-icon-svg e-eicon-chevron-left" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M646 125C629 125 613 133 604 142L308 442C296 454 292 471 292 487 292 504 296 521 308 533L604 854C617 867 629 875 646 875 663 875 679 871 692 858 704 846 713 829 713 812 713 796 708 779 692 767L438 487 692 225C700 217 708 204 708 187 708 171 704 154 692 142 675 129 663 125 646 125Z" fill="#42C6FA" />
+                </svg>
             </button>
-          </div>
+
+            <ul id="slider1" class="slider-items"></ul>
+
+            <button id="next-button" class="nav-btn next-button">
+                <svg aria-hidden="true" class="e-font-icon-svg e-eicon-chevron-left" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M646 125C629 125 613 133 604 142L308 442C296 454 292 471 292 487 292 504 296 521 308 533L604 854C617 867 629 875 646 875 663 875 679 871 692 858 704 846 713 829 713 812 713 796 708 779 692 767L438 487 692 225C700 217 708 204 708 187 708 171 704 154 692 142 675 129 663 125 646 125Z" fill="#42C6FA" />
+                </svg>
+            </button>
+        </div>
     </div>
 
     <script type="module" src="js/carrosel.js"></script>
-    </div>
+</body>
+
+</html>
