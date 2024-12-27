@@ -31,7 +31,7 @@ body{
     text-align: center;
     position: fixed top;
     background: black;
-    padding: 8px;
+    padding: 34px 12px;
 
   
   }
@@ -54,13 +54,21 @@ body{
     text-align: center;
     line-height: 3.6em;
     letter-spacing: 0.3px;
-    /* padding: 10rem; */
-    
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) ;
+    background-image: url('../img/background-ps.jpg'); /* Substitua pelo caminho da sua imagem */
+    background-repeat: no-repeat; /* Evita que a imagem seja repetida */
+    background-size: cover; /* Ajusta o tamanho para cobrir toda a área da div */
+    background-position: center; /* Centraliza a imagem no container */
+    width: 100%; /* Defina o tamanho desejado da div */
+    height: 650px; /* Ajuste conforme necessário */
 }
+
+
 .f-h1{
     font-family: "Oswald", sans-serif;
     font-weight: 400;
     font-style: normal;
+    padding-top: 6rem;
     
     
     
@@ -73,10 +81,10 @@ body{
 
 .fundo-2
 {
-  
     background: black;
     width: 100%;
     z-index: 100%;
+    padding-top: 2rem;
 }
 .sobre-card
 {
