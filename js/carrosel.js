@@ -1,4 +1,4 @@
-import { slider1, slider2 } from "./sliderMock.js";
+import { slider1, slider2, slider3, slider4 , slider5, slider6, slider7, slider8, slider9, slider10, slider11, slider12} from "./sliderMock.js";
 
 // Renderizar os slides em um container específico
 const renderSlides = (tagId, slides) => {
@@ -89,7 +89,7 @@ const slideCarousel = (sliderArray, containerId) => {
     } else if (window.innerWidth >= 1025 && window.innerWidth <= 1300) {
       slideWidth = 980; 
     } else {
-      slideWidth = 400;
+      slideWidth = 410;
     }
   
     const offset = -currentIndex * slideWidth;  // Cálculo do deslocamento
@@ -109,9 +109,40 @@ const slideCarousel = (sliderArray, containerId) => {
 
 // Renderiza e configura os sliders
 document.addEventListener("DOMContentLoaded", () => {
+
   renderSlides("slider1", slider1);
   slideCarousel(slider1, "slider1");
 
   renderSlides("slider2", slider2);
   slideCarousel(slider2, "slider2");
+
+  renderSlides("slider3", slider3);
+  slideCarousel(slider3, "slider3");
+
+  renderSlides("slider4", slider4);
+  slideCarousel(slider4, "slider4");
+
+  renderSlides("slider5", slider5);
+  slideCarousel(slider5, "slider5");
+
+  renderSlides("slider6", slider6);
+  slideCarousel(slider6, "slider6");
+
+  renderSlides("slider7", slider7);
+  slideCarousel(slider7, "slider7");
+
+  renderSlides("slider8", slider8);
+  slideCarousel(slider8, "slider8");
+
+  renderSlides("slider9", slider9);
+  slideCarousel(slider9, "slider9");
+
+  renderSlides("slider10", slider10);
+  slideCarousel(slider10, "slider10");
+
+  renderSlides("slider11", slider11);
+  slideCarousel(slider11, "slider11");
+
+  renderSlides("slider12", slider12);
+  slideCarousel(slider12, "slider12");
 });
