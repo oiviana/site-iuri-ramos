@@ -137,3 +137,17 @@ export const slider1 = [
     { id: 3, imgsrc: "./img/slider-12/Capa---450-variadas.png", imgtitle: "Slide 3", redirect: "#" },
     { id: 4, imgsrc: "./img/slider-12/Capa---Social-media-2.png", imgtitle: "Slide 4", redirect: "#" }
   ];
+
+  export const aeItems = [
+    { id: 1, label: "Cartoon", redirect: "#" },
+    { id: 2, label: "Desenhos Animados", redirect: "#" },
+    { id: 3, label: "Shape Elements", redirect: "#" },
+    { id: 4, label: "Stories Elements", redirect: "#" },
+    { id: 5, label: "Youtube", redirect: "#" },
+    { id: 6, label: "Transições", redirect: "#" },
+    { id: 7, label: "Natal", redirect: "#" },
+    { id: 8, label: "Textos Animados", redirect: "#" },
+    { id: 9, label: "Big Pack Motion", redirect: "#" },
+    { id: 10, label: "Efeito Notas de Papel", redirect: "#" },
+    { id: 11, label: "Diversos Templates News", redirect: "#" },
+  ];
