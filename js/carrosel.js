@@ -16,96 +16,62 @@ const renderSlides = (tagId, slides) => {
 // Função para configurar um slider
 const slideCarousel = (sliderArray, containerId) => {
   let currentIndex = 0;
-  let itemsOffset;
-  const totalItems = sliderArray.length;
   const sliderContainer = document.getElementById(containerId);
 
   // Define os botões dinâmicos para cada slider
   const nextBtn = document.querySelector(`#${containerId}-next-button`);
   const prevBtn = document.querySelector(`#${containerId}-prev-button`);
 
-  // Verifica o tamanho da tela e define o valor de itemsOffset
-  const updateItemsOffset = () => {
-    if (window.innerWidth <= 500) {
-      itemsOffset = 1;
-    } else if (window.innerWidth >= 501 && window.innerWidth <= 1024) {
-      itemsOffset = 2;
-    } else if (window.innerWidth >= 1025 && window.innerWidth <= 1300) {
-      itemsOffset = 3;
-    } else if (window.innerWidth >= 1301) {
-      itemsOffset = 5;
+  // Calcula a largura de um único slide com base no estilo CSS dinâmico
+  const getSlideWidth = () => {
+    const firstSlide = sliderContainer.querySelector(".slide");
+    if (firstSlide) {
+      return firstSlide.offsetWidth; // Apenas a largura do slide
     }
+    return sliderContainer.offsetWidth; // Fallback para largura total
   };
-  updateItemsOffset();
 
-  // Função para o próximo slide
+  // Move o slider para o índice correto
+  const updateSliderPosition = () => {
+    const slideWidth = getSlideWidth();
+    const offset = -currentIndex * slideWidth;
+    sliderContainer.style.transform = `translateX(${offset}px)`;
+    sliderContainer.style.transition = "transform 0.5s ease-in-out";
+  };
+
+  // Próximo slide com loop infinito
   const nextSlide = () => {
+    const maxIndex = sliderArray.length - 1;
 
-    if (currentIndex >= totalItems - itemsOffset) {
-      console.log("Último slide alcançado.");
-      return;
-    }
-    currentIndex += 1; 
-    console.log("Slide atual:", currentIndex + 1);
-  
-    let slideWidth = sliderContainer.querySelector(".slide").offsetWidth;
-  
-    // Ajuste para dispositivos móveis
-    if (window.innerWidth <= 500) {
-      slideWidth = 425; 
-    } else if (window.innerWidth >= 501 && window.innerWidth <= 1024) {
-      slideWidth = 780; 
-    } else if (window.innerWidth >= 1025 && window.innerWidth <= 1300) {
-      slideWidth = 980; 
+    if (currentIndex >= maxIndex) {
+      currentIndex = 0; // Volta para o início
     } else {
-      slideWidth = 410;
+      currentIndex += 1;
     }
-  
-    const offset = -currentIndex * slideWidth;  // Cálculo do deslocamento
-    
-    sliderContainer.style.transform = `translateX(${offset}px)`;
-    sliderContainer.style.transition = "transform 0.5s ease-in-out";
+    updateSliderPosition();
   };
-  
 
-  // slide anterior
+  // Slide anterior com loop infinito
   const prevSlide = () => {
-
     if (currentIndex <= 0) {
-      console.log("Primeiro slide alcançado.");
-      return;
-    }
-  
-    currentIndex -= 1;
-    console.log("Slide atual:", currentIndex + 1);
-  
-    let slideWidth = sliderContainer.querySelector(".slide").offsetWidth;
-  
-    // Ajuste para dispositivos móveis
-    if (window.innerWidth <= 500) {
-      slideWidth = 425; 
-    } else if (window.innerWidth >= 501 && window.innerWidth <= 1024) {
-      slideWidth = 780;
-    } else if (window.innerWidth >= 1025 && window.innerWidth <= 1300) {
-      slideWidth = 980; 
+      currentIndex = sliderArray.length - 1; // Vai para o final
     } else {
-      slideWidth = 410;
+      currentIndex -= 1;
     }
-  
-    const offset = -currentIndex * slideWidth;  // Cálculo do deslocamento
-    
-    // Aplica o deslocamento na transformação
-    sliderContainer.style.transform = `translateX(${offset}px)`;
-    sliderContainer.style.transition = "transform 0.5s ease-in-out";
+    updateSliderPosition();
   };
 
-  // Adiciona os eventos de clique aos botões
+  // Adiciona eventos de clique aos botões
   nextBtn.addEventListener("click", nextSlide);
   prevBtn.addEventListener("click", prevSlide);
 
-  // Atualiza o itemsOffset ao redimensionar a janela
-  window.addEventListener("resize", updateItemsOffset);
+  // Atualiza o slider ao redimensionar a janela
+  window.addEventListener("resize", updateSliderPosition);
+
+  // Centraliza o primeiro slide na inicialização
+  updateSliderPosition();
 };
+
 
 // Renderiza e configura os sliders
 document.addEventListener("DOMContentLoaded", () => {
