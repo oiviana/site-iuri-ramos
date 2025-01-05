@@ -7,7 +7,9 @@ const renderSlides = (tagId, slides) => {
     .map(
       (slide) =>
         `<li class="slide" id="slide-${slide.id}">
-           <img src="${slide.imgsrc}" alt="${slide.imgtitle}" title="${slide.imgtitle}">
+            <a href="${slide.redirect}">
+              <img src="${slide.imgsrc}" alt="${slide.imgtitle}" title="${slide.imgtitle}">
+           </a>
          </li>`
     )
     .join("");
