@@ -69,14 +69,22 @@ body{
     font-weight: 400;
     font-style: normal;
     padding-top: 6rem;
+    font-size: 42px;
     
-    
-    
+   }
+   
+   @media (min-width: 1024px) { 
+    .f-h1 {
+      font-size: 72px;
+      margin-bottom: 2rem;
+    }
+
    }
 
 .f-h2{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 25px;
+    line-height: 4rem;
 }
 
 .fundo-2
@@ -133,4 +141,10 @@ body{
   height: 100%;
   display: flex;
   justify-content: center;
+}
+
+.ae-title {
+  font-size: 36px;
+  text-align: center;
+  margin: 3rem auto;
 }

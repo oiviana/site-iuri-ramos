@@ -139,15 +139,15 @@ export const slider1 = [
   ];
 
   export const aeItems = [
-    { id: 1, label: "Cartoon", redirect: "#" },
-    { id: 2, label: "Desenhos Animados", redirect: "#" },
-    { id: 3, label: "Shape Elements", redirect: "#" },
-    { id: 4, label: "Stories Elements", redirect: "#" },
-    { id: 5, label: "Youtube", redirect: "#" },
-    { id: 6, label: "Transições", redirect: "#" },
-    { id: 7, label: "Natal", redirect: "#" },
-    { id: 8, label: "Textos Animados", redirect: "#" },
-    { id: 9, label: "Big Pack Motion", redirect: "#" },
-    { id: 10, label: "Efeito Notas de Papel", redirect: "#" },
-    { id: 11, label: "Diversos Templates News", redirect: "#" },
+    { id: 1, label: "Cartoon", redirect: "https://drive.google.com/drive/folders/1ZdG5zTN03ncEuFbgQAT0jCp96pFRptc8" },
+    { id: 2, label: "Desenhos Animados", redirect: "https://drive.google.com/drive/folders/1aax7QwrcfHYyH_qlWJuWBmZJ-fg-53NN" },
+    { id: 3, label: "Shape Elements", redirect: "https://drive.google.com/drive/folders/1VowHAbM5JZdjEZgBnTs3We7hwKJzu3ZL" },
+    { id: 4, label: "Stories Elements", redirect: "https://drive.google.com/drive/folders/1fRmhkq5RwLm1zUi7W-PTEZuM6yYkY-pw" },
+    { id: 5, label: "Youtube", redirect: "https://drive.google.com/drive/folders/1q6w5HpOD7jgMqT5dx7glBVEmn395nWsG" },
+    { id: 6, label: "Transições", redirect: "https://drive.google.com/drive/folders/1o4PuD9Qq7PHDJ9OzjvXF7-4saZ3F3EX_" },
+    { id: 7, label: "Natal", redirect: "https://drive.google.com/drive/folders/1PjDUOOiIuB4H2KHqylWqP-yJSXH9xcMv" },
+    { id: 8, label: "Textos Animados", redirect: "https://drive.google.com/drive/folders/1qiEzoTtWkce1Ct1JC2EAoZ68xZ87KCbg" },
+    { id: 9, label: "Big Pack Motion", redirect: "https://drive.google.com/drive/folders/1WbbChdim_7FcQx3NKdiDIsWDdCiwAipZ" },
+    { id: 10, label: "Efeito Notas de Papel", redirect: "https://drive.google.com/drive/folders/1ExdPlFxF6T8qQRvKKAFPV5I-ZwqWvhoH" },
+    { id: 11, label: "Diversos Templates News", redirect: "https://drive.google.com/drive/folders/11Xp_GB1g3AdgEy0yPouE4dAosj8Q58b7" },
   ];
