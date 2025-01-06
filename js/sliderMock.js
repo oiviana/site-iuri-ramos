@@ -151,3 +151,13 @@ export const slider1 = [
     { id: 10, label: "Efeito Notas de Papel", redirect: "https://drive.google.com/drive/folders/1ExdPlFxF6T8qQRvKKAFPV5I-ZwqWvhoH" },
     { id: 11, label: "Diversos Templates News", redirect: "https://drive.google.com/drive/folders/11Xp_GB1g3AdgEy0yPouE4dAosj8Q58b7" },
   ];
+
+  export const prItems = [
+    { id: 1, label: "Cenários Virtuais Premiere", redirect: "https://drive.google.com/file/d/1_s3FzPo9HzvY1FeHkIkXBRrM_kWrUAqZ/view" },
+    { id: 2, label: "Slides Show", redirect: "https://drive.google.com/file/d/1zfV7bQJn6YaQfdilXS6YkkfHPAlGJnop/view" },
+    { id: 3, label: "Títulos Animados", redirect: "https://drive.google.com/file/d/1fAhp8Q6TCxy00Pyi63HlyiE5n202MDsK/view" },
+    { id: 4, label: "Títulos Animados 2", redirect: "https://drive.google.com/file/d/19TudYt-Hka8VrKWQL3gDyo2jl2fxViBu/view" },
+    { id: 5, label: "Títulos Animados 3", redirect: "https://drive.google.com/file/d/1qOsLdSGvD86UkwH_2pV-iMFeNO82242e/view" },
+    { id: 6, label: "Transições para Premiere", redirect: "https://drive.google.com/file/d/1UrTfbCqfpmRrVVdTB__oSlz5LANwZOfb/view" },
+    { id: 7, label: "Ultra Editing kit", redirect: "https://drive.google.com/file/d/1XLODVWn4x2LOo_JBuC4DZX9BAxw3Yn9u/view" },
+  ];

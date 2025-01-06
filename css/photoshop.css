@@ -109,7 +109,7 @@ body{
     z-index: 1;
 }
 
-#link-items {
+#link-items, #link-items-pr {
   margin: 2rem auto;
   text-align: center;
   width: 100%;
@@ -117,22 +117,22 @@ body{
   list-style: none;
 }
 
-#link-items li {
+#link-items li, #link-items-pr li {
   padding: 1rem;
   border-radius: 4px;
   margin-bottom: 12px;
   transition: 0.3s;
 }
 
-#link-items li:hover { 
+#link-items li:hover, #link-items-pr li:hover { 
   background: #02FBFF;
 }
 
-#link-items li:hover > a { 
+#link-items li:hover > a, #link-items-pr li:hover > a { 
   color: black;
 }
 
-#link-items li a { 
+#link-items li a, #link-items-pr li a { 
   text-decoration: none;
   color: #ffffff;
   font-weight: 600;
